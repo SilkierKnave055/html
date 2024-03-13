@@ -4,8 +4,8 @@
     
     'database' => array(
       'host' => 'localhost',
-      'username' => 'dev',
-      'password' => 'mysql',
+      'username' => 'phpmyadmin',
+      'password' => 'phpmyadmin',
       'database' => 'GALLERY2',
       'encoding' => 'utf8',
     ),

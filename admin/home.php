@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Thumbnail Gallery - Start Bootstrap Template</title>
+    <title>home</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,20 +31,36 @@
 
 <body>
 
+
       <?php
 
+        include "includes/menu.php";
+        
         $page = $_GET['page'];
 
-        switch ( $page) {
-          case 'login':
-            include "includes/login.inc.php";
+        switch ( $page) 
+        {
+          case 'listado':
+            include "actions/listado.act.php";
+            include "includes/listado.inc.php";
+            break;
+
+          case 'autores':
+            include "includes/listado_autores.inc.php";
+            break;
+
+          case 'new':
+            include "includes/new_foto.inc.php";
+            break;
+
+          case 'edit':
+            include "includes/edit_foto.inc.php";
             break;
           
-          case 'new':
-            include "includes/new.inc.php";
+          default:
+            # code...
             break;
         }
-        
 
       ?>
     
